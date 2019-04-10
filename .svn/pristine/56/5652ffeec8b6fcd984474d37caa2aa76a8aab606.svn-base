@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only class="menuButton" (click)="Menu"> 
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title center>Admin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  Welcome HR,
+
+  <ion-nav #mycontent [root]="AdminPage"></ion-nav>
+  <ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-label>
+
+        <div id="accordion">
+          <div class="item">
+              Employee Onboarding
+          
+              <div padding>
+              <ion-list (click)="addUser()">   
+                Initiate Employee Onboarding
+              </ion-list>
+
+              <ion-list (click)="viewExistingUser()">
+                View Onboarding Details
+              </ion-list>
+            </div>
+          </div>
+        </div>
+
+        <ion-list (click)="viewDashboard()">
+          Dashboard
+        </ion-list>
+
+        <ion-list (click)="logout()">
+          Logout
+        </ion-list>
+      </ion-label>
+    </ion-content>
+  </ion-menu>
+  <!--<ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-label>
+         
+       <ion-list (click)="addUser()">
+        Employee Onboarding
+      </ion-list>
+
+      <ion-list (click)="addUser()">
+       Initiate Employee Onboarding
+      </ion-list>
+
+       <ion-list (click)="viewExistingUser()">
+       View Existing user
+      </ion-list>
+
+       </ion-list>
+       <ion-list (click)="viewDashboard()">
+       HR dashboard
+     
+      <!--<ion-list (click)=" notificationPage()">
+          Reports
+         </ion-list>-->
+
+  <!--<ion-list (click)="logout()">
+            Logout
+           </ion-list>
+           </ion-label>
+    </ion-content>
+  </ion-menu>
+  
+  
+  <img src = "../../assets/imgs/hr-onboarding-block.jpg">-->
+
+
+</ion-content>

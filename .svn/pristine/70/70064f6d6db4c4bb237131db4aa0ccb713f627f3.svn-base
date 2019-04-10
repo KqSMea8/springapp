@@ -1,0 +1,87 @@
+<!--
+  Generated template for the DocumentsUploadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>documents-upload</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-col class="progress-outer">
+        <ion-col class="progress-inner"  [style.width]="progress + '%'">
+            {{progress}}%
+        </ion-col>
+    </ion-col>
+<form method="POST"  enctype="multipart/form-data" action="/uploadFiles">
+  <ion-list no-lines>
+    <ion-item *ngFor="let c of certificates">
+      <ion-label>{{ c }}</ion-label>
+      <ion-input type="file" accept="image/*" (change)="changeListener($event)" >
+      </ion-input> 
+    </ion-item>
+  </ion-list>
+  </form>
+
+  <button ion-button block item-end color="primary" (click)="gotodashboard()">Submit</button>
+</ion-content>-->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Certificates
+    </ion-title>
+      <!--<ion-col>
+        <ion-icon class="btn-right log-out" (click)="gotohomePage()" name="log-out"></ion-icon>
+      </ion-col>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--<ion-row>
+    <ion-col class="progress-outer">
+      <ion-col class="progress-inner" [style.width]="progress + '%'">
+        {{progress}}%
+      </ion-col>
+    </ion-col>
+  </ion-row>-->
+  <div class="Adjust">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="a()">
+            <img src="../assets/imgs/Graduate icon.png">
+            <h6>Educational Certificates</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="b()">
+            <img src="../assets/imgs/importent.png">
+            <h6>Technical Certificates</h6>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="c()">
+            <img src="../assets/imgs/Personal icon.png">
+            <h6>Personal Documents</h6>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card (click)="d()">
+            <img src="../assets/imgs/experience.png">
+            <h6>Professional Documents </h6>
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

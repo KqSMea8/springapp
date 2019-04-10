@@ -1,0 +1,79 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Initiate Employee Onboarding</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding> 
+ 
+    <form [formGroup]="addUserForm">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Employee Name</ion-label>
+                <ion-input type="text" formControlName="name"  [ngClass]="{'error-border':!addUserForm.controls['name'].valid}"></ion-input>
+            </ion-item>
+
+            <div class="error-display">
+                <span class="error-box" *ngIf="addUserForm.controls['name'].hasError('required') && addUserForm.controls['name'].touched">* Name is required!</span>
+                <span class="error-box" *ngIf="addUserForm.controls['name'].hasError('pattern')">* Enter valid name!</span>
+            </div>
+
+            <ion-item>
+                <ion-label floating>Employee ID</ion-label>
+                <ion-input type="text" formControlName="empid" value="" [ngClass]="{'error-border':!addUserForm.controls['empid'].valid}"></ion-input>
+            </ion-item>
+
+            <div class="error-display">
+                <span class="error-box" *ngIf="addUserForm.controls['empid'].hasError('required') && addUserForm.controls['empid'].touched"> * EmpId is required!</span>
+            </div>
+
+            <ion-item>
+                <ion-label floating>Email ID</ion-label>
+                <ion-input type="email" formControlName="emailid" value=""></ion-input>
+            </ion-item>
+
+            <div class="error-display">
+                <span class="error-box" *ngIf="addUserForm.controls['emailid'].hasError('required') && addUserForm.controls['emailid'].touched"> * Email id is required!</span>
+                <span class="error-box" *ngIf="addUserForm.controls['emailid'].hasError('pattern')">* Enter valid Email Id!</span>
+            </div>
+
+            <ion-item>
+                <ion-label floating>1st Level Interviewer</ion-label>
+                <ion-input type="text" formControlName="interviewerRound1" value=""></ion-input>
+            </ion-item>
+
+            <div class="error-display">
+                <span class="error-box" *ngIf="addUserForm.controls['interviewerRound1'].hasError('required') && addUserForm.controls['interviewerRound1'].touched"> * Interviewer for Round 1 is required!</span>
+                <span class="error-box" *ngIf="addUserForm.controls['interviewerRound1'].hasError('pattern')">* Enter valid Interviewer name!</span>
+            </div>
+
+            <ion-item>
+                <ion-label floating>2nd Level Interviewer</ion-label>
+                <ion-input type="text" formControlName="interviewerRound2" value=""></ion-input>
+            </ion-item>
+
+            <div class="error-display">
+                <span class="error-box" *ngIf="addUserForm.controls['interviewerRound2'].hasError('required') && addUserForm.controls['interviewerRound2'].touched"> * Interviewer for Round 2 is required!</span>
+                <span class="error-box" *ngIf="addUserForm.controls['interviewerRound2'].hasError('pattern')">* Enter valid Interviewer name!</span>
+            </div>
+
+            <ion-item>
+                <ion-label floating>DOJ</ion-label>
+                <ion-datetime display-format="MMM DD, YYYY HH:mm" formControlName="doj"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Status</ion-label>
+                <ion-input type="text" formControlName="pending" [readonly]="isReadonly">
+                </ion-input>
+            </ion-item>
+
+           <!--<div padding>-->
+                <button ion-button primary block  (click)="onSubmit()">Submit</button>
+            <!--</div>-->
+        </ion-list>
+
+    </form>
+
+</ion-content>

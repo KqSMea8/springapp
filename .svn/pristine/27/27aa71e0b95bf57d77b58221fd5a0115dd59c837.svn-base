@@ -1,0 +1,66 @@
+<!--
+  Generated template for the ExistingUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title *ngIf="!isOn" center>List of Employees</ion-title>
+      <ion-searchbar *ngIf="isOn" (ionInput)="getemp()" (ionCancel)="reset()"  [(ngModel)]="username" ></ion-searchbar>
+    <ion-buttons end>
+      <button class="searchbutton" (click)="toggleDetails()"><ion-icon name="search" class="search"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <div *ngFor="let emp of employeeTable; let i=index" (click)="open(i)">
+    <ion-row class="employeeContainer">
+      <div class="colm imageContainer">
+        <ion-icon name="person"></ion-icon>
+       
+        <span [style.background-color]="setBackground(emp.ie_emp_status)" class="dot">
+        </span>
+      </div>
+      <div class="row1">
+        <div class="name colm">
+          {{emp.ie_emp_name}} (ID: {{emp.ie_emp_id}})
+        </div>
+      </div>
+
+      <div class="row2">
+        {{emp.ie_emp_email}}
+          <!--<ion-icon name="arrow-dropright" class="right-arrow" ></ion-icon>-->
+        </div>
+      
+    </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>
+
+
+
+<!--<ion-footer>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon (click)="gotoIntroductionPage()" name="home"></ion-icon>
+        </ion-col>
+        <ion-col id="uploadicon">
+          <ion-icon (click)="gotoUploadDocuments()" name="cloud-upload"></ion-icon>
+        </ion-col>
+        <ion-col id="center" >
+          <ion-icon (click)="gotohelpPage()" name="person"></ion-icon>
+
+        </ion-col>
+        <ion-col id="center" class="btn-right">
+          <ion-icon (click)="gotohomePage()" name="log-out"></ion-icon>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+</ion-footer>-->
+

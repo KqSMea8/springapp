@@ -1,0 +1,16 @@
+page-home {
+    .borderBtm{
+      border-bottom: 1px solid lightgrey;
+    }
+      #cardcenter{
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         flex: 1;
+         text-align: center;
+        
+         margin-bottom: 10px; 
+      }
+
+    
+}

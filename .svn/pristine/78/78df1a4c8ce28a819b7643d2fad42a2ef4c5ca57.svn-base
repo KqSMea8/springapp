@@ -1,0 +1,69 @@
+<!--
+  Generated template for the ExistingUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ExistingUser</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+ <ion-grid>
+    <ion-row>
+        <ion-col class="center" size="4" size-md>
+          EmpId:2701 
+        </ion-col>
+       <ion-col class="center">
+          EmpName:xxxx 
+      </ion-col>
+      <ion-col class="left">
+      <button small ion-button (click)="viewDocs" primary float-right>View</button>
+    </ion-col>
+  </ion-row>
+
+   <ion-row>
+        <ion-col class="center" size="4" size-md>
+          EmpId:2702 
+        </ion-col>
+       <ion-col class="center">
+          EmpName:yyyy 
+      </ion-col>
+      <ion-col class="left">
+      <button small  ion-button (click)="viewDocs" primary float-right>View</button>
+      
+    </ion-col>
+  </ion-row>
+
+   <ion-row>
+        <ion-col class="center" size="4" size-md>
+          EmpId:2702 
+        </ion-col>
+       <ion-col class="center">
+          EmpName:zzzz 
+      </ion-col>
+      <ion-col class="left">
+      <button small ion-button (click)="viewDocs" primary float-right>View</button>
+    </ion-col>
+  </ion-row>
+
+   <ion-row>
+        <ion-col class="center" size="4" size-md>
+          EmpId:2705
+        </ion-col>
+       <ion-col class="center">
+          EmpName:vvvv 
+      </ion-col>
+      <ion-col class="left">
+      <button small ion-button (click)="viewDocs" primary float-right>View</button>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+</ion-content>
+

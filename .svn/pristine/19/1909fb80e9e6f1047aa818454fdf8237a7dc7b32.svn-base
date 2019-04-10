@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: dockerdemo
+Implementation-Version: 2.1.3.RELEASE
+Built-By: suriyakala.s
+Implementation-Vendor-Id: com.prodapt.docker
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/dockerdemo
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,68 @@
+<!--
+  Generated template for the Home1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager="true">
+    <ion-slide>
+      <ion-grid>
+   <div>
+    <img src="../../assets/imgs/Puzzles connect.png">
+   </div>
+    <div>
+    <ion-row>
+      <ion-col text-center>
+         Prodapt is a land of abundant opportunities where Innovation and Ideation is the key
+      </ion-col>
+    </ion-row>
+    </div>
+ </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+   <div>
+    <img src="../assets/imgs/we are prodaptions.png">
+   </div>
+    <div>
+    <ion-row>
+      <ion-col text-center>
+         Global leader in providing Software, Engineering and Operational services to Digital Service Providers. Prodapt is a fun-filled place to work
+      </ion-col>
+    </ion-row>
+    </div>
+ </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+   <div>
+    <img src="../assets/imgs/posh.png">
+   </div>
+    <div>
+    <ion-row>
+      <ion-col text-center>
+         POSH (Prevention of Sexual Harassment) is a legislative act that recognises the human rights of protection against sexual harassment
+      </ion-col>
+    </ion-row>
+    </div>
+ </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer>
+
+  <button ion-button color="primary" (click)="gotoDashboardPage()" block class="custom-button">Continue</button>
+</ion-footer>

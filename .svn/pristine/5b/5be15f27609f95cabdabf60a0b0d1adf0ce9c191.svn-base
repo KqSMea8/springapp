@@ -1,0 +1,122 @@
+<!--
+  Generated template for the ViewEducationalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Educational Documents</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content *ngIf="eduDocument" padding>
+
+  <ion-row>
+    <ion-grid>
+      <div class="name colm">
+        Employee ID : {{eduDocument.ed_emp_id}}
+      </div>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="name colm" let i=index;>
+        SSLC Marksheet
+      </div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_sslc}}"  alt="">
+      </div>
+      
+       <ion-row>
+         <ion-col class="btnVal">
+       <button #first ion-button color="primary" (click)="btnActivate(first)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="row2">
+        HSC Marksheet</div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_hsc}}"  alt="">
+      </div>
+      <ion-row>
+         <ion-col class="btnVal">
+       <button #second ion-button color="primary" (click)="btnActivate(second)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="row2">
+        Diploma Certificate </div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_dip}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col class="btnVal">
+       <button #third ion-button color="primary" (click)="btnActivate(third)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="row2">
+        UG Certificate </div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_ug}}"  alt="">
+      </div>
+      <ion-row>
+         <ion-col class="btnVal">
+       <button #fourth ion-button color="primary" (click)="btnActivate(fourth)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="row2">
+        PG Certificate </div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_pg}}"  alt="">
+      </div>
+      <ion-row>
+         <ion-col class="btnVal">
+       <button #fifth ion-button color="primary" (click)="btnActivate(fifth)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="row2">
+        Others </div>
+      <div>
+        <img src="data:image/png;base64,{{eduDocument.ed_edu_others}}"  alt="">
+      </div>
+      <ion-row>
+         <ion-col class="btnVal">
+       <button #sixth ion-button color="primary" (click)="btnActivate(sixth)">{{validate_holder}}</button>
+        </ion-col>
+        <ion-col class="btnLeft">
+          <button ion-button primary>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-row>
+</ion-content>

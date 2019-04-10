@@ -1,0 +1,137 @@
+<!--
+  Generated template for the SchoolCertificatesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Educational Certificates</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>SSLC</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+      
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>HSC</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>Diploma</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>UG</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>PG</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>Others</h6>
+            <ion-item>
+              <ion-label id="profile_image" color="primary" stacked></ion-label>
+              <ion-input clearInput type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <h6>Comments</h6>
+            <ion-item>
+              <ion-textarea placeholder="Enter your comments..."></ion-textarea>
+            </ion-item>
+            <ion-buttons end>
+              <button ion-button color="primary">Save</button>
+            </ion-buttons>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    &nbsp;
+    <button ion-button primary block (click)="uploadImage()">
+      Upload
+    </button>
+  </ion-grid>
+
+</ion-content>

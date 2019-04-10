@@ -1,0 +1,21 @@
+page-welcome {
+
+.bg-style {
+    background-color: #ec232a;
+}
+.custom-button{
+ color:#ec232a;
+ background-color: white;
+ padding-top: 10px;
+}
+ion-grid {
+    height: 100%;
+    justify-content: center;
+}
+ion-col {
+    background-image: url('../../www/assets/imgs/title11.png');
+    max-height: 50%;
+    max-width: 50%;
+    color: white;
+}
+}

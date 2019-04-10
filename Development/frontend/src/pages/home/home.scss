@@ -1,0 +1,27 @@
+page-home {
+    .borderBtm{
+      border-bottom: 1px solid lightgrey;
+    }
+      #cardcenter{
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         flex: 1;
+         text-align: center;
+         margin-bottom: 10px; 
+      }
+
+      .divb
+      {
+        width: 100%;
+            height: 30%;
+            max-height: 30%;
+            margin: 0;
+            padding: 0;
+            background-image: url('../../assets/imgs/Untitled.png');
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+      }   
+
+       
+}

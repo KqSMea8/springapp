@@ -1,0 +1,104 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-row>
+      <ion-col>
+        <ion-title>Profile</ion-title>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-icon class="btn-right log-out" (click)="gotohomePage()" name="log-out"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <ion-grid>
+            <ion-row>{{name}}</ion-row>
+          </ion-grid>
+          <ion-grid>
+            <ion-row>{{mail}}</ion-row>
+          </ion-grid>
+        </ion-col>
+        <ion-col>
+          <div class="btn-right">
+            <div class="positionRelative">
+              <round-progress [current]="current" [max]="max" [stroke]="stroke" [radius]="radius" [semicircle]="semicircle" [rounded]="rounded"
+                [responsive]="responsive" [clockwise]="clockwise" [color]="gradient ? 'url(#gradient)' : color" [background]="background"
+                [duration]="duration" [animation]="animation" [animationDelay]="animationDelay">
+              </round-progress>
+              <div class="percentageValue">
+                {{current}} %
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>Job Title </ion-col>
+        <ion-col>:</ion-col>
+        <ion-col>{{jobTitle}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Department </ion-col>
+        <ion-col>:</ion-col>
+        <ion-col>{{department}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Location </ion-col>
+        <ion-col>:</ion-col>
+        <ion-col>{{location}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Supervisor </ion-col>
+        <ion-col>:</ion-col>
+        <ion-col>{{supervisor}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+       
+        <ion-col id="uploadicon">
+
+          <ion-icon (click)="gotoUploadDocuments()" name="cloud-upload"></ion-icon>
+        </ion-col>
+        <ion-col id="center" class="btn-right">
+          <ion-icon (click)="gotohelpPage()" name="help-circle"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-toolbar>
+</ion-footer>

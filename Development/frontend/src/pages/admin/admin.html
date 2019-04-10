@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only class="menuButton" (click)="Menu"> 
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title center>Admin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  Welcome HR,
+
+  <ion-nav #mycontent [root]="AdminPage"></ion-nav>
+  <ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-label>
+
+        <div id="accordion">
+          <div class="item">
+            Employee Onboarding
+            <div padding>
+              <ion-list (click)="addUser()">
+                Initiate Employee Onboarding
+              </ion-list>
+            </div>
+          </div>
+        </div>
+
+        <div id="accordion">
+          <div class="item">
+              Dashboard
+             <div padding>
+            <ion-list (click)="viewExistingUser()">
+              View Onboarding Details
+            </ion-list>
+          </div>
+          </div>
+        </div>
+             <div class="left">
+            <ion-list (click)="logout()">
+              Logout
+            </ion-list>
+             </div>
+      </ion-label>
+    </ion-content>
+  </ion-menu>
+  <page-existing-user >  </page-existing-user>
+</ion-content>

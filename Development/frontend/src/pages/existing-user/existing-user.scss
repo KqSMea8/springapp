@@ -1,0 +1,114 @@
+page-existing-user {
+
+    .search{
+		zoom: 170%;
+		color: white;
+}
+ .searchbutton{
+	 background-color:#ec232a; 
+ }
+    .employeeContainer{
+        display: grid;
+        grid-template-columns:20% 80%;
+        
+    }
+        ion-row{
+            padding: 15px;
+            border-bottom: 1px solid gainsboro;
+            .name,.location,.empID{
+                margin:5px 10px;
+                text-align: left;
+            }
+            .name{
+                font-size: 16px;
+            }
+            .location,.empID,.pin,.id{
+                color: #aaa;
+                margin:0 3px;
+                margin-left:5px;
+            }
+            .pin,.id{
+                font-size: 12px;
+            }
+            .imageContainer{
+                padding: 0;   
+               
+                zoom: 4;
+                grid-row: 1 / 3;
+                span{
+                    position: relative;
+                    margin-left:-5px;
+
+  height: 3px;
+  width: 3px;
+  border: 1.5px thin #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+            }
+          
+            img{
+                width: 100px;
+                height: 100px;
+                box-shadow: 0 0 5px gray;
+                border-radius: 5px;
+            }
+            
+.status-pending{
+    background-color: #ec232a;
+}
+.status-inProgress{
+    background-color: green;
+}
+.status-submitted{
+    background-color: blue;
+}
+.status-validated{
+    background-color: yellow;
+}
+            .row1{
+                padding-left: 20px;
+            }
+            .row2{
+                display: flex;
+                justify-content: space-between;
+                padding-left: 30px;
+            }
+            .right-arrow{
+            color: #ec232a;
+            zoom: 1.6;
+        }
+        }
+       
+    #center{
+        align-items: center;
+        left: 50px;
+    }
+    #uploadicon{
+        left: 25px;
+    }
+    
+    ion-col{
+        align-content:center;
+    }
+   ion-footer{
+             width:100%;
+             height:50px;
+            
+             ion-icon{
+                 margin-top: -10px;
+                 font-size: 27px;
+                 color: #aaa;
+             }
+   }
+  
+.center{
+    top: 25px;
+}
+
+.bb{
+    right: 30px;
+    top: 25px;
+}
+ 
+}

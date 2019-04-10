@@ -1,0 +1,41 @@
+page-admin {
+
+	
+  
+ion-label{
+        
+        font-size: 1.1em;
+   }
+
+#accordion {
+	
+}
+#accordion .item {
+	width: 500px;
+	height: 30px;
+	overflow: hidden;
+    padding-left: 20px;
+	transition: height ease-in-out 0.5s; 
+	-moz-transition: height ease-in-out 0.5s;
+	-webkit-transition: height ease-in-out 0.5s;
+	margin-bottom: 1px;
+}
+#accordion a {
+	display: block;
+	background: #e6e6e6;
+	color: #1e1e1e;
+	text-decoration: none;
+}
+#accordion p {
+	height: 180px;
+	padding: 10px;
+}
+
+ #accordion div:hover{
+ 	height: 90px; 
+ }
+
+.left{
+	padding-left: 20px;
+}
+}

@@ -1,0 +1,11 @@
+page-school-certificates {
+   ion-card{
+        width:100%;
+        height:100%;
+    }
+ion-textarea{
+    height:25%;
+    width:100%;
+}
+
+}

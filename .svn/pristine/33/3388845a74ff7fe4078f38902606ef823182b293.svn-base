@@ -1,0 +1,8 @@
+page-view-educational {
+  .btnVal{
+      padding-left: 20px;
+  }
+  .btnLeft{
+      padding-left: 80px;
+  } 
+}

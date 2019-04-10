@@ -1,0 +1,44 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Dashboard</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding >
+    
+<div class="item item-text-wrap" *ngFor="let emp of employeeTable">
+
+        <ion-card>
+            
+                <ion-grid>
+                    <ion-row class="center">
+                        <ion-col size="4" size-md>
+                            <ion-icon id="imageuser" name="image" item-end> </ion-icon>
+                        </ion-col>
+                        <ion-col class="bb"> EmpId:   {{emp.ie_emp_id}}
+                        </ion-col>
+                        <ion-col class="center" size="2" size-md>
+                            Name:  {{emp.ie_emp_name}}
+                        </ion-col>
+                    </ion-row>
+
+              
+                    <ion-row>
+                        <ion-col>Onboarding Date:  {{emp.ie_emp_doj}}
+                            </ion-col>
+                        <ion-col>
+                            Status : {{emp.ie_status}}
+                        </ion-col>
+
+                    </ion-row>
+
+                </ion-grid>
+
+                <button ion-button (click)="viewdocs()" primary block>View</button>
+            
+        </ion-card>
+  </div>
+
+</ion-content>

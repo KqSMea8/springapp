@@ -1,0 +1,40 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <h2 text-center>ProPad</h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="cardcenter">
+    <ion-card>
+      <img src="../../assets/imgs/employee-onboarding.png">
+   <ion-grid>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input class="borderBtm" type="text" [(ngModel)]="username" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input class="borderBtm" type="password" [(ngModel)]="password" value=""></ion-input>
+      </ion-item>
+   </ion-grid>
+      <div >
+        <button ion-button primary block (click)="gotoDashboard()">
+      LOG IN
+    </button>
+      </div>
+    </ion-card>
+  </div>
+  <button ion-button outline color="primary" (click)="gotoadminpage()">
+    ADMIN LOG IN
+   </button>
+</ion-content>

@@ -1,0 +1,33 @@
+page-dashboard {
+    ion-icon{
+        zoom: 2;
+    }
+    #center{
+        align-items: center;
+        left: 50px;
+    }
+    #uploadicon{
+        left: 25px;
+    }
+    .log-out{
+        color:white;
+    }
+    ion-col{
+        align-content:center;
+    }
+    .positionRelative{
+        position: relative;
+    
+    }
+    
+    .percentageValue {
+        left: 0px;
+        top: 40%;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+

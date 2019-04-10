@@ -1,0 +1,931 @@
+webpackJsonp([11],{
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddUserPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AddUserPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddUserPage = (function () {
+    function AddUserPage(navCtrl, navParams, fb) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.fb = fb;
+    }
+    AddUserPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddUserPage');
+    };
+    /* onSubmit(value: any):void{
+      console.log('Form submitted!')
+      console.log(value);
+      this.navCtrl.pop();
+    }	*/
+    AddUserPage.prototype.ngOnInit = function () {
+        this.addUserForm = this.fb.group({
+            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')])],
+            empid: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            emailid: [''],
+            offerletterdate: [''],
+            interviewerRound1: [''],
+            interviewerRound2: [''],
+            doj: [''],
+            dateOfOnborading: [''],
+            Status: [''],
+        });
+    };
+    AddUserPage.prototype.onSubmit = function () {
+        if (this.addUserForm.valid) {
+            console.log(this.addUserForm.value);
+        }
+        this.navCtrl.pop();
+    };
+    AddUserPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-add-user',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\add-user\add-user.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n        <ion-title>Initiate Onboarding process</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content padding> \n \n    <div [formGroup]="addUserForm">\n        <ion-list>\n            <ion-item>\n                <ion-label floating>Employee Name</ion-label>\n                <ion-input type="text" formControlName="name" value="" [ngClass]="{\'error-border\':!addUserForm.controls[\'name\'].valid}"></ion-input>\n            </ion-item>\n\n            <div class="error-display">\n                <span class="error-box" *ngIf="addUserForm.controls[\'name\'].hasError(\'required\') && addUserForm.controls[\'name\'].touched">* Name is required!</span>\n                <span class="error-box" *ngIf="addUserForm.controls[\'name\'].hasError(\'pattern\')">* Enter valid name!</span>\n            </div>\n\n            <ion-item>\n                <ion-label floating>Employee id</ion-label>\n                <ion-input type="text" formControlName="empid" value="" [ngClass]="{\'error-border\':!addUserForm.controls[\'empid\'].valid}"></ion-input>\n            </ion-item>\n\n            <div class="error-display">\n                <span class="error-box" *ngIf="addUserForm.controls[\'empid\'].hasError(\'required\') && addUserForm.controls[\'empid\'].touched"> * EmpId is required!</span>\n            </div>\n\n            <ion-item>\n                <ion-label floating>Email id</ion-label>\n                <ion-input type="email" formControlName="emailid" value=""></ion-input>\n            </ion-item>\n\n\n            <ion-item>\n                <ion-label floating>Interviewer for Round 1</ion-label>\n                <ion-input type="text" formControlName="interviewerRound1" value=""></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating>Interviewer for Round 2</ion-label>\n                <ion-input type="text" formControlName="interviewerRound2" value=""></ion-input>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating>DOJ</ion-label>\n                <ion-datetime display-format="MMM DD, YYYY HH:mm" formControlName="doj"></ion-datetime>\n            </ion-item>\n             \n             <ion-item>\n                <ion-label floating>Status</ion-label>\n                <ion-input type="text" formControlName="Status" value=""></ion-input>\n            </ion-item>\n\n            <div padding>\n                <button ion-button primary block (click)="onSubmit()">Add</button>\n            </div>\n        </ion-list>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\add-user\add-user.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object])
+    ], AddUserPage);
+    return AddUserPage;
+    var _a, _b, _c;
+}());
+
+/*export class AddUserPage implements OnInit {
+  formVar: FormGroup;
+  name: FormControl;
+  empid: FormControl;
+  emailid: FormControl;
+  offerletterdate: FormControl;
+  interviewerRound1: FormControl;
+  interviewerRound2: FormControl;
+  doj: FormControl;
+  dateOfOnborading: FormControl;
+  status: FormControl;
+
+  constructor(public navCtrl: NavController, private fb: FormBuilder) {
+  
+
+  //ionViewDidLoad() {
+    console.log('ionViewDidLoad AddUserPage');
+  }
+
+  ngOnInit() {
+    this.name = new FormControl();
+    this.empid = new FormControl();
+    this.emailid = new FormControl();
+    this.offerletterdate = new FormControl();
+    this.interviewerRound1 = new FormControl();
+    this.interviewerRound2 = new FormControl();
+    this.doj = new FormControl();
+    this.dateOfOnborading = new FormControl();
+    this.status = new FormControl();
+
+    this.formVar = this.fb.group({
+      name: '',
+      empid: '',
+      emailid: '',
+      offerletterdate: '',
+      interviewerRound1: '',
+      interviewerRound2: '',
+      doj: '',
+      dateOfOnborading: '',
+      status: ''
+    });
+
+  }
+  }
+  onSubmit() {
+    console.log(this.formVar.value);
+    this.navCtrl.pop();
+  }
+
+  //submit(){
+  //this.navCtrl.pop();
+  // console.log('Details added');
+  //}
+}*/
+//# sourceMappingURL=add-user.js.map
+
+/***/ }),
+
+/***/ 105:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_user_add_user__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_user_view_user__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__existing_user_existing_user__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__notification_notification__ = __webpack_require__(51);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the AdminPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AdminPage = (function () {
+    function AdminPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AdminPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdminPage');
+    };
+    AdminPage.prototype.addUser = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__add_user_add_user__["a" /* AddUserPage */]);
+    };
+    AdminPage.prototype.viewDashboard = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__view_user_view_user__["a" /* ViewUserPage */]);
+    };
+    AdminPage.prototype.viewExistingUser = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__existing_user_existing_user__["a" /* ExistingUserPage */]);
+    };
+    AdminPage.prototype.logout = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_5__home_home__["a" /* HomePage */]);
+    };
+    AdminPage.prototype.notificationPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__notification_notification__["a" /* NotificationPage */]);
+    };
+    AdminPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-admin',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\admin\admin.html"*/'\n<ion-header>\n\n    <ion-navbar color="primary">\n      <button ion-button menuToggle icon-only class="menuButton" (click)="Menu"> \n    <ion-icon name="menu"></ion-icon>\n  </button>\n      <ion-title center>Admin</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n  Welcome HR, \n  \n  <ion-nav #mycontent [root]="AdminPage"></ion-nav>\n  \n  <ion-menu [content]="mycontent">\n    <ion-content>\n      <ion-label>\n      <ion-list (click)="addUser()">\n       Initiate Onboarding Process\n  \n      </ion-list>\n       <ion-list (click)="viewDashboard()">\n       HR dashboard\n  \n      </ion-list>\n       <ion-list (click)="viewExistingUser()">\n       View Existing user\n  \n      </ion-list>\n     \n      <ion-list (click)=" notificationPage()">\n          Reports\n         </ion-list>\n         <ion-list (click)="logout()">\n            Logout\n      \n           </ion-list>\n            </ion-label>\n    </ion-content>\n  </ion-menu>\n  \n  \n  <!--<img src = "../../assets/imgs/hr-onboarding-block.jpg">-->\n  \n  \n    </ion-content>\n  '/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\admin\admin.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], AdminPage);
+    return AdminPage;
+}());
+
+//# sourceMappingURL=admin.js.map
+
+/***/ }),
+
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewUserPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__view_document_view_document__ = __webpack_require__(107);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the ViewUserPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ViewUserPage = (function () {
+    function ViewUserPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ViewUserPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ViewUserPage');
+    };
+    ViewUserPage.prototype.viewdocs = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__view_document_view_document__["a" /* ViewDocumentPage */]);
+    };
+    ViewUserPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-view-user',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\view-user\view-user.html"*/'\n<ion-header>\n\n   <ion-navbar color="primary">\n    <ion-title>Admin</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n<ion-list>\n\n   <ion-card >\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row class="center">\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col  class="bb"> EmpId: 2800\n    </ion-col>\n    <ion-col class="center" size="2" size-md>\n           Name: Abcd        \n              </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col >Onboarding Date: 12/03/2019</ion-col>\n              <ion-col>\n                 Status : Pending\n              </ion-col>\n          </ion-row>\n\n         \n      </ion-grid>\n\n    <button ion-button (click)="viewdocs()" primary block>View</button>\n</div>\n </ion-card>\n </ion-list>\n</ion-content>\n  <!-- <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId:  2801\n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Xyz       \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: xyz@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n   \n \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2809 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Joey        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: joey@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n     \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2810 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Wil        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: wil@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n     \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2811 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Stephen        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: stephen@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n     \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2812 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Jeny        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: jeny@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n     \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2815 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Keny        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: keny@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n     \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2819 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Ross        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: ross@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n   \n   </ion-card>\n\n   <ion-card (click)="viewdocs()">\n   <div class = "item item-text-wrap">\n     \n      <ion-grid>\n          <ion-row>\n    <ion-col size="4" size-md>\n      <ion-icon id="imageuser" name="image" item-end> </ion-icon> \n      </ion-col>\n      <ion-col class="center"> EmpId: 2820 \n    </ion-col>\n          </ion-row>\n\n\n          <ion-row>\n              <ion-col size="2" size-md>\n           Empname: Rachel        \n              </ion-col>\n              <ion-col>\n                  Emp Mailid: rachel@prodapt.com \n              </ion-col>\n          </ion-row>\n      </ion-grid>\n   </div>\n  \n   </ion-card>\n</ion-list>-->\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\view-user\view-user.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], ViewUserPage);
+    return ViewUserPage;
+}());
+
+//# sourceMappingURL=view-user.js.map
+
+/***/ }),
+
+/***/ 107:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewDocumentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ViewDocumentPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ViewDocumentPage = (function () {
+    function ViewDocumentPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ViewDocumentPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ViewDocumentPage');
+    };
+    ViewDocumentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-view-document',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\view-document\view-document.html"*/'<!--\n  Generated template for the ViewDocumentPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>viewDocument</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\view-document\view-document.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], ViewDocumentPage);
+    return ViewDocumentPage;
+}());
+
+//# sourceMappingURL=view-document.js.map
+
+/***/ }),
+
+/***/ 108:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExistingUserPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ExistingUserPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ExistingUserPage = (function () {
+    function ExistingUserPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    ExistingUserPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ExistingUserPage');
+    };
+    ExistingUserPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-existing-user',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\existing-user\existing-user.html"*/'<!--\n  Generated template for the ExistingUserPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>ExistingUser</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-searchbar placeholder="Search"></ion-searchbar>\n <ion-grid>\n    <ion-row>\n        <ion-col class="center" size="4" size-md>\n          EmpId:2701 \n        </ion-col>\n       <ion-col class="center">\n          EmpName:xxxx \n      </ion-col>\n      <ion-col class="left">\n      <button small ion-button (click)="viewDocs" primary float-right>View</button>\n    </ion-col>\n  </ion-row>\n\n   <ion-row>\n        <ion-col class="center" size="4" size-md>\n          EmpId:2702 \n        </ion-col>\n       <ion-col class="center">\n          EmpName:yyyy \n      </ion-col>\n      <ion-col class="left">\n      <button small  ion-button (click)="viewDocs" primary float-right>View</button>\n      \n    </ion-col>\n  </ion-row>\n\n   <ion-row>\n        <ion-col class="center" size="4" size-md>\n          EmpId:2702 \n        </ion-col>\n       <ion-col class="center">\n          EmpName:zzzz \n      </ion-col>\n      <ion-col class="left">\n      <button small ion-button (click)="viewDocs" primary float-right>View</button>\n    </ion-col>\n  </ion-row>\n\n   <ion-row>\n        <ion-col class="center" size="4" size-md>\n          EmpId:2705\n        </ion-col>\n       <ion-col class="center">\n          EmpName:vvvv \n      </ion-col>\n      <ion-col class="left">\n      <button small ion-button (click)="viewDocs" primary float-right>View</button>\n    </ion-col>\n  </ion-row>\n </ion-grid>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\existing-user\existing-user.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], ExistingUserPage);
+    return ExistingUserPage;
+}());
+
+//# sourceMappingURL=existing-user.js.map
+
+/***/ }),
+
+/***/ 109:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__documents_upload_documents_upload__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__help_help__ = __webpack_require__(111);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the DashboardPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DashboardPage = (function () {
+    function DashboardPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        // @Input('progress')  progress;
+        this.current = 10;
+        this.max = 100;
+        this.stroke = 10;
+        this.radius = 30;
+        this.semicircle = false;
+        this.rounded = false;
+        this.responsive = false;
+        this.clockwise = true;
+        this.color = '#45ccce';
+        this.background = '#eaeaea';
+        this.duration = 800;
+        this.animation = 'easeOutCubic';
+        this.animationDelay = 0;
+        this.animations = [];
+        this.gradient = false;
+        this.realCurrent = 0;
+    }
+    DashboardPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DashboardPage');
+    };
+    DashboardPage.prototype.gotoUploadDocuments = function () {
+        console.log("Dfs");
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__documents_upload_documents_upload__["a" /* DocumentsUploadPage */]);
+    };
+    DashboardPage.prototype.gotohomePage = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+    };
+    DashboardPage.prototype.gotohelpPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__help_help__["a" /* HelpPage */]);
+    };
+    DashboardPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-dashboard',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\dashboard\dashboard.html"*/'<!--\n  Generated template for the DashboardPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-row>\n      <ion-col> <ion-title >Profile</ion-title> </ion-col>\n     \n     \n          <ion-col> <ion-icon class="btn-right log-out" (click)="gotohomePage()" name="log-out"></ion-icon> </ion-col></ion-row>\n         \n      \n  </ion-navbar>\n\n</ion-header>\n<ion-content padding>\n\n  <ion-card>\n    \n   \n   \n    \n    \n    \n     \n      <ion-grid>\n        <ion-row>\n         \n           <ion-col>\n             <ion-grid>\n             <ion-row>Banu B</ion-row></ion-grid>\n             <ion-grid>\n             <ion-row>banu.b@prodapt.com</ion-row>\n            </ion-grid></ion-col> \n             <ion-col>\n                <div class="btn-right">\n                    <div class="positionRelative">\n                    <round-progress [current]="current" [max]="max" [stroke]="stroke" [radius]="radius" [semicircle]="semicircle"\n                      [rounded]="rounded" [responsive]="responsive" [clockwise]="clockwise"\n                      [color]="gradient ? \'url(#gradient)\' : color" [background]="background" [duration]="duration"\n                      [animation]="animation" [animationDelay]="animationDelay"> \n               </round-progress>\n               <div class="percentageValue">\n                 {{current}} %\n              </div>\n                  </div>\n                </div>\n\n                  \n\n\n             </ion-col>\n          </ion-row>\n        </ion-grid>\n        \n          \n            <ion-grid>\n                <ion-row>\n                  <ion-col>Job Title </ion-col>\n                  <ion-col>:</ion-col>\n                   <ion-col>Senior Solution Architect II</ion-col> \n                  </ion-row>\n                </ion-grid>\n                <ion-grid>\n                    <ion-row>\n                      <ion-col>Department </ion-col>\n                      <ion-col>:</ion-col>\n                       <ion-col>Delivery</ion-col> \n                      </ion-row>\n                    </ion-grid>\n                    <ion-grid>\n                        <ion-row>\n                          <ion-col>Location </ion-col>\n                          <ion-col>:</ion-col>\n                           <ion-col>Chennai</ion-col> \n                          </ion-row>\n                        </ion-grid>\n                        <ion-grid>\n                            <ion-row>\n                              <ion-col>Supervisor </ion-col>\n                              <ion-col>:</ion-col>\n                               <ion-col>Alagiri Srinivasan</ion-col> \n                              </ion-row>\n                            </ion-grid>\n\n\n\n\n                    \n\n\n        \n \n  </ion-card>\n\n\n\n\n</ion-content>\n\n<ion-footer padding>\n  <ion-toolbar>\n    <ion-grid>\n      <ion-row>\n        <ion-col > \n            \n            <ion-icon name="notifications"></ion-icon>\n            \n        </ion-col>\n        <ion-col id="uploadicon">\n            \n            <ion-icon (click)="gotoUploadDocuments()" name="cloud-upload"></ion-icon>\n        </ion-col>\n        <ion-col id="center" class="btn-right">\n            <ion-icon  (click)="gotohelpPage()" name="help-circle"></ion-icon>\n            \n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n    \n\n  </ion-toolbar>\n</ion-footer>\n\n  \n\n\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\dashboard\dashboard.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], DashboardPage);
+    return DashboardPage;
+}());
+
+//# sourceMappingURL=dashboard.js.map
+
+/***/ }),
+
+/***/ 110:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentsUploadPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the DocumentsUploadPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DocumentsUploadPage = (function () {
+    function DocumentsUploadPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.certificates = [];
+        this.progress = 0;
+    }
+    DocumentsUploadPage.prototype.ngOnInit = function () {
+        for (var i = 0; i < 10; i++) {
+            this.certificates.push("Certificate " + (i + 1));
+        }
+    };
+    DocumentsUploadPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DocumentsUploadPage');
+    };
+    DocumentsUploadPage.prototype.gotodashboard = function () {
+        this.navCtrl.pop();
+    };
+    DocumentsUploadPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-documents-upload',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\documents-upload\documents-upload.html"*/'<!--\n  Generated template for the DocumentsUploadPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>documents-upload</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div class="progress-outer">\n        <div class="progress-inner"  [style.width]="progress + \'%\'">\n            {{progress}}%\n        </div>\n    </div>\n\n  <ion-list no-lines>\n    <ion-item *ngFor="let c of certificates">\n      <ion-label>{{ c }}</ion-label>\n      <button ion-button item-end color="danger">Upload</button>\n    </ion-item>\n  </ion-list>\n  <button ion-button block item-end color="primary" (click)="gotodashboard()">Submit</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\documents-upload\documents-upload.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], DocumentsUploadPage);
+    return DocumentsUploadPage;
+}());
+
+//# sourceMappingURL=documents-upload.js.map
+
+/***/ }),
+
+/***/ 111:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the HelpPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HelpPage = (function () {
+    function HelpPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    HelpPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HelpPage');
+    };
+    HelpPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-help',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\help\help.html"*/'<!--\n  Generated template for the HelpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>help</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-card>\n  contact: hr@prodapt.com\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\help\help.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], HelpPage);
+    return HelpPage;
+}());
+
+//# sourceMappingURL=help.js.map
+
+/***/ }),
+
+/***/ 122:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 122;
+
+/***/ }),
+
+/***/ 163:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/add-user/add-user.module": [
+		285,
+		10
+	],
+	"../pages/admin/admin.module": [
+		286,
+		9
+	],
+	"../pages/dashboard/dashboard.module": [
+		287,
+		8
+	],
+	"../pages/documents-upload/documents-upload.module": [
+		290,
+		7
+	],
+	"../pages/existing-user/existing-user.module": [
+		288,
+		6
+	],
+	"../pages/help/help.module": [
+		289,
+		5
+	],
+	"../pages/home/home.module": [
+		295,
+		4
+	],
+	"../pages/main-dashboard/main-dashboard.module": [
+		291,
+		0
+	],
+	"../pages/notification/notification.module": [
+		294,
+		3
+	],
+	"../pages/view-document/view-document.module": [
+		292,
+		2
+	],
+	"../pages/view-user/view-user.module": [
+		293,
+		1
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 163;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 209:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 233:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_dashboard_dashboard__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_documents_upload_documents_upload__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular_svg_round_progressbar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angular_svg_round_progressbar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_angular_svg_round_progressbar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_admin_admin__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_user_add_user__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_existing_user_existing_user__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_view_user_view_user__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_notification_notification__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_view_document_view_document__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_help_help__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_forms__ = __webpack_require__(13);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_dashboard_dashboard__["a" /* DashboardPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_documents_upload_documents_upload__["a" /* DocumentsUploadPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_add_user_add_user__["a" /* AddUserPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_existing_user_existing_user__["a" /* ExistingUserPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_view_user_view_user__["a" /* ViewUserPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_notification_notification__["a" /* NotificationPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_view_document_view_document__["a" /* ViewDocumentPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_notification_notification__["a" /* NotificationPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_help_help__["a" /* HelpPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/admin/admin.module#AdminPageModule', name: 'AdminPage', segment: 'admin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/existing-user/existing-user.module#ExistingUserPageModule', name: 'ExistingUserPage', segment: 'existing-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/help/help.module#HelpPageModule', name: 'HelpPage', segment: 'help', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/documents-upload/documents-upload.module#DocumentsUploadPageModule', name: 'DocumentsUploadPage', segment: 'documents-upload', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/main-dashboard/main-dashboard.module#MainDashboardPageModule', name: 'MainDashboardPage', segment: 'main-dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-document/view-document.module#ViewDocumentPageModule', name: 'ViewDocumentPage', segment: 'view-document', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-user/view-user.module#ViewUserPageModule', name: 'ViewUserPage', segment: 'view-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/notification/notification.module#NotificationPageModule', name: 'NotificationPage', segment: 'notification', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_9_angular_svg_round_progressbar__["RoundProgressModule"],
+                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["e" /* ReactiveFormsModule */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_add_user_add_user__["a" /* AddUserPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_existing_user_existing_user__["a" /* ExistingUserPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_view_user_view_user__["a" /* ViewUserPage */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_dashboard_dashboard__["a" /* DashboardPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_documents_upload_documents_upload__["a" /* DocumentsUploadPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_view_document_view_document__["a" /* ViewDocumentPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_notification_notification__["a" /* NotificationPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_help_help__["a" /* HelpPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        platform.ready().then(function () {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_admin__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notification_notification__ = __webpack_require__(51);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HomePage = (function () {
+    function HomePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    HomePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HomePage');
+    };
+    HomePage.prototype.gotoDashboard = function () {
+        console.log("D");
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard__["a" /* DashboardPage */]);
+    };
+    HomePage.prototype.gotoadminpage = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__admin_admin__["a" /* AdminPage */]);
+    };
+    HomePage.prototype.gotonotification = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__notification_notification__["a" /* NotificationPage */]);
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\home\home.html"*/'<!--\n  Generated template for the HomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title><h4 text-center margin-top>ProPad</h4></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div id="cardcenter">\n<ion-card  >\n    <img src="../../assets/imgs/employee-onboarding.png">\n    \n  <ion-item>\n    <ion-label stacked>Email id </ion-label>\n    <ion-input [(ngModel)]="username"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label stacked>Password</ion-label>\n    <ion-input type="password" [(ngModel)]="password"></ion-input>\n  </ion-item>\n\n  <div id="round">\n    <button ion-button color="primary" (click)="gotoDashboard()">\n      LOG IN\n    </button>\n    \n  </div>\n</ion-card>\n</div>\n<button ion-button outline color="primary" (click)="gotoadminpage()">\n    ADMIN LOG IN\n   </button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\home\home.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 51:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the NotificationPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var NotificationPage = (function () {
+    function NotificationPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.initializeItems();
+    }
+    NotificationPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad NotifyPage');
+    };
+    NotificationPage.prototype.initializeItems = function () {
+        this.items = [
+            { name: 'Hasan ', avatar: 'http://placehold.it/100', group: 'Group 1' },
+            { name: 'Amcik ', avatar: 'http://placehold.it/100', group: 'Group 1' },
+            { name: 'Pezo ', avatar: 'http://placehold.it/100', group: 'Group 1' },
+            { name: 'Achu ', avatar: 'http://placehold.it/100', group: 'Group 2' },
+            { name: 'abi ', avatar: 'http://placehold.it/100', group: 'Group 2' },
+            { name: 'Ami ', avatar: 'http://placehold.it/100', group: 'Group 2' },
+            { name: 'Emmy ', avatar: 'http://placehold.it/100', group: 'Group 3' },
+            { name: 'Danny ', avatar: 'http://placehold.it/100', group: 'Group 3' },
+            { name: '6pack ', avatar: 'http://placehold.it/100', group: 'Group 3' },
+            { name: 'Marco ', avatar: 'http://placehold.it/100', group: 'Group 4' },
+            { name: 'Suresh  ', avatar: 'http://placehold.it/100', group: 'Group 4' },
+            { name: 'Lancer ', avatar: 'http://placehold.it/100', group: 'Group 4' },
+            { name: 'Aadi ', avatar: 'http://placehold.it/100', group: 'Group 3' }
+        ];
+        var groups = [
+            {
+                name: 'Group 1',
+                count: 0,
+                items: [],
+            },
+            {
+                name: 'Group 2',
+                count: 0,
+                items: [],
+            },
+            {
+                name: 'Group 3',
+                count: 0,
+                items: [],
+            },
+            {
+                name: 'Group 4',
+                count: 0,
+                items: [],
+            }
+        ];
+        for (var j = 0; j < groups.length; j++) {
+            for (var i = 0; i < this.items.length; i++) {
+                if (this.items[i].group == groups[j].name) {
+                    groups[j].count++;
+                    groups[j].items.push(this.items[i]);
+                }
+            }
+        }
+        this.items = groups;
+    };
+    NotificationPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-notification',template:/*ion-inline-start:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\notification\notification.html"*/'<!--\n  Generated template for the NotificationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="primary">\n      <ion-title>Notifications</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  <ion-content>\n    <ion-searchbar>\n  </ion-searchbar>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-12 col-md *ngFor="let item of items">\n          <ion-card>\n              <ion-item>\n          <h2>{{ item.name }}</h2>\n          <p>{{ item.count }} Candidates</p>\n            <ion-item *ngFor="let i of item.items">\n            <ion-avatar item-left>\n              <img src="{{i.avatar}}">\n            </ion-avatar>\n          </ion-item>\n        </ion-item>\n          </ion-card>\n        </ion-col>\n      </ion-row>\n  </ion-grid>\n  </ion-content>\n    '/*ion-inline-end:"C:\Users\srijith.m\Desktop\Onboarding\Development\ProPad\src\pages\notification\notification.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+    ], NotificationPage);
+    return NotificationPage;
+}());
+
+//# sourceMappingURL=notification.js.map
+
+/***/ })
+
+},[209]);
+//# sourceMappingURL=main.js.map

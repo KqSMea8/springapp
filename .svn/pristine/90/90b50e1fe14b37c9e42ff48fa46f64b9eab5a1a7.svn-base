@@ -1,0 +1,7 @@
+page-feature {
+ion-item{
+    
+        list-style-type: disc;
+      
+}
+}

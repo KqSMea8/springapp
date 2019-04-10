@@ -1,0 +1,12 @@
+FROM java:8
+EXPOSE 8070
+VOLUME /tmp
+# The application's jar file
+
+ARG JAR_FILE=target/dockerdemo.jar
+
+# Add the application's jar to the container
+ADD ${JAR_FILE} dockerdemo.jar
+
+# Run the jar file 
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/dockerdemo.jar"]

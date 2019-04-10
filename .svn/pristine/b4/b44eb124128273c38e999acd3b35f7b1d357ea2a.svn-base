@@ -1,0 +1,129 @@
+<!--
+  Generated template for the ViewProfessionalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Professional Documents</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content *ngIf="profDocument" padding>
+
+  <ion-row>
+    <ion-grid>
+      <div class="name colm">
+        Employee ID : {{profDocument.ep_emp_id}}
+      </div>
+    </ion-grid>
+
+    <ion-grid>
+      <div class="name colm">
+        Professional certificate 1
+      </div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_service_cert1}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <div class="row2">
+        Technical certificate 2 </div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_service_cert2}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <div class="row2">
+        Technical certificate 3
+      </div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_service_cert3}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <div class="row2">
+        Payslip 1 </div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_payslip1}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <div class="row2">
+        Payslip 2</div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_payslip2}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <div class="row2">
+        Payslip 3</div>
+      <div>
+        <img src="data:image/png;base64,{{profDocument.ep_payslip3}}"  alt="">
+      </div>
+      <ion-row>
+        <ion-col>
+          <button ion-button primary block>Validate</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button primary block>Resend</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-row>
+
+</ion-content>
